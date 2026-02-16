@@ -1,3 +1,3 @@
 .PHONY: *
 .DEFAULT:
-	@go run -C build . $@
+	@go run -C make . $@

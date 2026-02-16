@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mitchellh/hashstructure/v2"
-	"github.com/stretchr/testify/require"
-
 	"github.com/anchore/go-cache"
+	"github.com/gohugoio/hashstructure"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_HashType(t *testing.T) {
@@ -101,7 +100,7 @@ func Test_HashType(t *testing.T) {
 
 func Test_hashIgnores(t *testing.T) {
 	hash := func(v any) string {
-		v, err := hashstructure.Hash(v, hashstructure.FormatV2, &hashstructure.HashOptions{})
+		v, err := hashstructure.Hash(v, &hashstructure.HashOptions{})
 		require.NoError(t, err)
 		return fmt.Sprintf("%x", v)
 	}

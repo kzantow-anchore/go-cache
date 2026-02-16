@@ -11,9 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/spf13/afero"
-
 	"github.com/anchore/go-logger"
+	"github.com/spf13/afero"
 )
 
 // NewFromDir creates a new cache manager which returns caches stored on disk, rooted at the given directory

@@ -10,9 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/require"
-
 	"github.com/anchore/go-logger/adapter/discard"
+	"github.com/stretchr/testify/require"
 )
 
 func Test_filesystemCache(t *testing.T) {
